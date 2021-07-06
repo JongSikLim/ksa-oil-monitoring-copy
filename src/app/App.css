@@ -1,0 +1,8 @@
+input.error:-webkit-autofill,
+input.error:-webkit-autofill:hover,
+input.error:-webkit-autofill:focus,
+input.error:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition: background-color 9999s ease-out;
+  -webkit-box-shadow: 0 0 0px 1000px #f83b3b1e inset !important;
+  /* -webkit-text-fill-color: rgb(231, 231, 231) !important; */ }

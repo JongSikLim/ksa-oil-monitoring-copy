@@ -1,0 +1,306 @@
+.custom-loader,
+.custom-loader:after {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px; }
+
+.custom-loader {
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 4px solid #e9e9e9;
+  border-right: 4px solid #e9e9e9;
+  border-bottom: 4px solid #e9e9e9;
+  border-left: 4px solid #2684ff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear; }
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.loading-modal-container {
+  width: 240px;
+  height: 240px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.loading-modal-container .loading-spin-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.loading-modal-container .text-area {
+  margin-top: 20px;
+  text-align: center;
+  color: #4e5961; }
+
+.loading-modal-container .text-area .title {
+  font-size: 18px;
+  font-weight: bold; }
+
+.loading-modal-container .text-area .sub-title {
+  font-size: 14px;
+  margin-top: 4px; }
+
+.recalc-confirm-modal-container {
+  background-color: #fff;
+  z-index: 1000; }
+
+.input-form-field-box {
+  position: relative; }
+
+.input-form-field-box .input-form-label {
+  color: #4e5961;
+  font-size: 16px;
+  font-weight: bold; }
+
+.input-form-field-box .input-form-label .input-form-toggle-switch {
+  vertical-align: super; }
+
+.input-form-field-box .input-form-sub-label {
+  margin-top: 6px;
+  color: #4e5961;
+  font-size: 11px; }
+
+.input-form-field-box .input-form-field {
+  margin-top: 6px; }
+
+.input-form-field-box .input-form-field .ant-form-item {
+  margin-bottom: 0; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-input-number {
+  width: 100%;
+  border-radius: 4px; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-input-number .ant-input-number-input {
+  padding: 0 16px;
+  height: 46px; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-input-group .ant-input-group-addon {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 46px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #e9eaeb; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-input-group .ant-input {
+  line-height: 46px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 0 16px; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-input {
+  line-height: 46px;
+  border-radius: 4px;
+  padding: 0 16px; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-input.ant-input-disabled {
+  background-color: #f3f3f3; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-select-selector {
+  border-radius: 4px;
+  height: fit-content; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-select-selector .ant-select-selection-item {
+  line-height: 46px;
+  font-size: 16px; }
+
+.input-form-field-box .input-form-field .ant-form-item .ant-select-selector .ant-select-selection-placeholder {
+  line-height: 46px;
+  font-size: 16px; }
+
+.input-form-field-box .input-form-field .ant-form-item .anticon.anticon-down.ant-select-suffix {
+  color: #000; }
+
+.input-form-field-box .input-form-gutter-box {
+  display: flex;
+  line-height: 7px;
+  position: absolute;
+  right: -18px;
+  bottom: 21px; }
+
+.input-form-field-box .ant-table-container {
+  border: none; }
+
+.input-form-field-box .ant-table-container table {
+  border-collapse: collapse;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #d4d6d8;
+  border-radius: 4px !important;
+  overflow: hidden;
+  text-align: center; }
+
+.input-form-field-box .ant-table-container table thead tr th {
+  border-color: #d4d6d8 !important;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #e9eaeb;
+  text-align: center;
+  line-height: 46px;
+  padding: 0; }
+
+.input-form-field-box .ant-table-container table tbody tr td {
+  line-height: 46px;
+  padding: 0; }
+
+.input-form-field-box .editable-table.sub-consumption {
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  border-collapse: collapse;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #d4d6d8;
+  overflow: hidden; }
+
+.input-form-field-box .editable-table.sub-consumption th,
+.input-form-field-box .editable-table.sub-consumption td {
+  border: solid 1px #d4d6d8; }
+
+.input-form-field-box .editable-table.sub-consumption thead tr th {
+  width: 50%;
+  height: 46px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #e9eaeb; }
+
+.input-form-field-box .editable-table.sub-consumption tbody tr td {
+  font-size: 16px;
+  height: 46px; }
+
+.input-form-field-box .editable-table.sub-consumption tbody tr td .ant-form-item {
+  height: 100%;
+  margin-bottom: 0; }
+
+.input-form-field-box .editable-table.sub-consumption tbody tr td .ant-form-item .ant-form-item-control-input {
+  width: 100%;
+  height: 100%; }
+
+.input-form-field-box .editable-table.sub-consumption tbody tr td .ant-form-item .ant-form-item-control-input .ant-input-number {
+  width: 100%; }
+
+.input-form-field-box .editable-table.sub-consumption tbody tr td .ant-form-item .ant-form-item-control-input .ant-input-number input {
+  text-align: center; }
+
+.ant-input-number-handler-wrap {
+  display: none; }
+
+.ant-upload.ant-upload-drag {
+  background-color: #fff !important;
+  border: none !important; }
+
+.ant-upload.ant-upload-drag .ant-upload-btn .ant-upload-drag-container .ant-upload-text {
+  margin-top: 20px;
+  color: #797979; }
+
+.ant-upload.ant-upload-drag .ant-upload-btn .ant-upload-drag-container .btn-box {
+  margin-top: 40px; }
+
+.ant-upload.ant-upload-drag .ant-upload-btn .ant-upload-drag-container .btn-box button {
+  width: 94px;
+  height: 36px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  color: #eee;
+  background-color: #2680eb;
+  font-size: 16px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box {
+  display: flex; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel {
+  height: 500px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel.left {
+  padding: 60px;
+  width: 430px;
+  display: flex;
+  align-items: center; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel.right {
+  width: 430px;
+  padding: 30px;
+  background-color: #f3f3f3; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box {
+  text-align: center; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .attachment-image {
+  font-size: 60px;
+  color: #1173fd; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .subtext {
+  margin-top: 10px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .interface-area {
+  margin-top: 40px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .interface-area .btn {
+  font-size: 18px;
+  padding: 4px 16px;
+  background-color: #1173fd;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 1.5; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group {
+  overflow-y: auto;
+  height: 400px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group::-webkit-scrollbar {
+  width: 5px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 16px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group .list .list-content-box {
+  display: flex;
+  align-items: center; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group .list .list-content-box > .icon {
+  color: #00c52e;
+  font-size: 40px; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group .list .list-content-box > .text {
+  margin-left: 16px;
+  text-align: left; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group .list .list-content-box > .text > .head {
+  width: 200px;
+  font-size: 16px;
+  font-weight: bold; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group .list .list-content-box > .text > .sub {
+  font-size: 12px;
+  font-weight: lighter; }
+
+.file-list-upload-modal-contaier .file-list-upload-modal-flex-box .panel .panel-flex-box .list-group .list .list-content-box > .interface .icon {
+  font-size: 30px;
+  cursor: pointer; }

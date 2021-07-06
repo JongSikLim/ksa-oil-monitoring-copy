@@ -1,0 +1,325 @@
+@import '../../common.scss';
+// InputForm 속성
+.input-form-field-box {
+  position: relative;
+
+  .input-form-label {
+    color: #4e5961;
+    font-size: 16px;
+    font-weight: bold;
+
+    .input-form-unit {
+    }
+
+    .input-form-toggle-switch {
+      vertical-align: super;
+    }
+  }
+
+  .input-form-sub-label {
+    margin-top: 6px;
+    color: #4e5961;
+    font-size: 11px;
+  }
+
+  .input-form-field {
+    margin-top: 6px;
+
+    .ant-form-item {
+      margin-bottom: 0;
+
+      //SECTION InputNumber
+      .ant-input-number {
+        width: 100%;
+        border-radius: 4px;
+
+        .ant-input-number-input {
+          padding: 0 16px;
+          height: 46px;
+        }
+      }
+
+      //SECTION Input
+      .ant-input-group {
+        .ant-input-group-addon {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+
+          width: 46px;
+          font-weight: bold;
+          font-size: 16px;
+
+          background-color: #e9eaeb;
+        }
+
+        .ant-input {
+          line-height: 46px;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          padding: 0 16px;
+        }
+      }
+      .ant-input {
+        line-height: 46px;
+        border-radius: 4px;
+        padding: 0 16px;
+
+        &.ant-input-disabled {
+          background-color: #f3f3f3;
+        }
+      }
+
+      //SECTION dropdown
+      .ant-select-selector {
+        border-radius: 4px;
+        // line-height: 46psx;
+        height: fit-content;
+
+        .ant-select-selection-item {
+          line-height: 46px;
+          font-size: 16px;
+        }
+
+        .ant-select-selection-placeholder {
+          line-height: 46px;
+          font-size: 16px;
+        }
+      }
+
+      .anticon.anticon-down.ant-select-suffix {
+        color: #000;
+      }
+    }
+  }
+
+  .input-form-gutter-box {
+    display: flex;
+    line-height: 7px;
+    position: absolute;
+    right: -18px;
+    bottom: 21px;
+  }
+
+  .ant-table-container {
+    border: none;
+    table {
+      border-collapse: collapse;
+      border-style: hidden;
+      box-shadow: 0 0 0 1px #d4d6d8;
+      border-radius: 4px !important;
+      overflow: hidden;
+
+      text-align: center;
+      thead {
+        tr {
+          th {
+            border-color: #d4d6d8 !important;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #e9eaeb;
+
+            text-align: center;
+            line-height: 46px;
+            padding: 0;
+          }
+          td {
+          }
+        }
+      }
+      tbody {
+        tr {
+          th {
+          }
+          td {
+            line-height: 46px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  //SECTION editable table 속성
+  .editable-table.sub-consumption {
+    width: 100%;
+    text-align: center;
+
+    //border radius 관련
+    border-radius: 4px;
+    border-collapse: collapse;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #d4d6d8;
+    overflow: hidden;
+
+    th,
+    td {
+      border: solid 1px #d4d6d8;
+    }
+
+    thead {
+      tr {
+        th {
+          width: 50%;
+          height: 46px;
+          font-size: 16px;
+          font-weight: bold;
+
+          background-color: #e9eaeb;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          font-size: 16px;
+          height: 46px;
+
+          .ant-form-item {
+            height: 100%;
+            margin-bottom: 0;
+
+            .ant-form-item-control-input {
+              width: 100%;
+              height: 100%;
+
+              .ant-input-number {
+                width: 100%;
+
+                input {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// InputNumber에 숫자 올리는 위아래 버튼 제거
+.ant-input-number-handler-wrap {
+  display: none;
+}
+
+//!SECTION
+
+// SECTION 업로드 속성
+.ant-upload {
+  &.ant-upload-drag {
+    background-color: #fff !important;
+    border: none !important;
+
+    .ant-upload-btn {
+      .ant-upload-drag-container {
+        .ant-upload-text {
+          margin-top: 20px;
+          color: #797979;
+        }
+
+        .btn-box {
+          margin-top: 40px;
+
+          button {
+            width: 94px;
+            height: 36px;
+            padding: 6px 14px;
+            border-radius: 4px;
+            color: #eee;
+            background-color: #2680eb;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//SECTION 파일업로드 모달 속성
+.file-list-upload-modal-contaier {
+  .file-list-upload-modal-flex-box {
+    display: flex;
+
+    .panel {
+      height: 500px;
+      &.left {
+        padding: 60px;
+        width: 430px;
+
+        display: flex;
+        align-items: center;
+      }
+
+      &.right {
+        width: 430px;
+        padding: 30px;
+        background-color: #f3f3f3;
+      }
+
+      .panel-flex-box {
+        //left panel
+        // height: 100%;
+        text-align: center;
+
+        .attachment-image {
+          font-size: 60px;
+          color: $color-btn-primary;
+        }
+        .subtext {
+          margin-top: 10px;
+        }
+        .interface-area {
+          margin-top: 40px;
+          .btn {
+            @include primary-button;
+          }
+        }
+
+        //right panel
+        .list-group {
+          overflow-y: auto;
+          height: 400px;
+          @include slim-scrollbar;
+          .list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 16px;
+            .list-content-box {
+              display: flex;
+              align-items: center;
+              > .icon {
+                color: $color-label-green;
+                font-size: 40px;
+              }
+              > .text {
+                margin-left: 16px;
+                text-align: left;
+                > .head {
+                  width: 200px;
+                  font-size: 16px;
+                  font-weight: bold;
+                }
+                > .sub {
+                  font-size: 12px;
+                  font-weight: lighter;
+                }
+              }
+              > .interface {
+                .icon {
+                  // margin-left: 20px;
+                  font-size: 30px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//!SECTION

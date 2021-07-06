@@ -1,0 +1,201 @@
+@import '../common.scss';
+
+.site-layout-container {
+  // SECTION 헤더 속성
+  > .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #16191c;
+    color: #4e5961;
+
+    height: 64px;
+
+    .left-menu {
+      display: flex;
+      height: 100%;
+
+      .logo-box {
+        width: 180px;
+        height: 100%;
+
+        border-right: 1px solid #4e5961;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav-box {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .menu-ul {
+          padding: 0;
+          margin: 0;
+          display: flex;
+          list-style: none;
+
+          .menu-item {
+            padding-left: 50px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            &:hover,
+            &.active {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .right-menu {
+      display: flex;
+      height: 100%;
+
+      .interface-box {
+        display: flex;
+        align-items: center;
+
+        height: 100%;
+
+        // SECTION 선사 선택 박스 속성
+        .company-select-box {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+
+          background-color: $color-label-green;
+          margin-right: 16px;
+          border-radius: 16px;
+
+          padding: 4px 8px 4px 4px;
+          // margin-right: 50px;
+          cursor: pointer;
+
+          .icon {
+            color: #fff;
+            font-size: 24px;
+          }
+
+          .text {
+            margin-left: 6px;
+
+            font-size: 12px;
+            // font-weight: bold;
+            color: #fff;
+          }
+        }
+
+        // SECTION 선박 검색 바 속성
+        .vessel-search-box {
+          display: flex;
+
+          width: 428px;
+          height: 100%;
+
+          padding: 0 24px;
+          background-color: #4e5961;
+
+          .header-vessel-search-input {
+            height: 100%;
+            > .ant-input-wrapper {
+              height: 100%;
+              > .ant-input-affix-wrapper {
+                width: 100%;
+                height: 100%;
+                border: none;
+                padding: 0;
+                background-color: #4e5961;
+
+                > .ant-input-prefix {
+                  padding: 0;
+                  margin: 0;
+                  background-color: #4e5961;
+                }
+                > .ant-input {
+                  margin-left: 24px;
+                  border: none;
+                  background-color: #4e5961;
+                  width: 100%;
+                  height: 100%;
+                  font-size: 14px;
+                  color: #fff;
+
+                  &::placeholder {
+                    font-size: 14px;
+                    color: #fff;
+                  }
+                }
+              }
+              > .ant-input-group-addon {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // SECTION 메인 콘텐트 영역 속성
+  & > .content {
+    width: 100%;
+    height: calc(100vh - 64px);
+    background-color: $color-sheet-bg;
+  }
+}
+
+//SECTION 선박 검색 DRAWER 속성
+.vessel-search-drawer-container {
+  position: absolute;
+  right: 0;
+
+  width: 428px;
+  height: calc(100vh - 64px);
+  background-color: #fff;
+  z-index: 500;
+
+  box-shadow: -3px 0 6px 0 rgba(0, 0, 0, 0.2);
+
+  > .flex-box {
+    height: 100%;
+    padding: 20px;
+
+    > .ant-tabs {
+      height: 100%;
+
+      .ant-tabs-nav {
+        margin-bottom: 10px;
+        .ant-tabs-tab {
+          padding: 0;
+          padding-bottom: 4px;
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .ant-tabs-content-holder {
+        overflow-y: auto;
+        @include slim-scrollbar;
+        .ant-tabs-content {
+          .vessel-box {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgba(17, 115, 253, 0.08);
+              color: #1173fd;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

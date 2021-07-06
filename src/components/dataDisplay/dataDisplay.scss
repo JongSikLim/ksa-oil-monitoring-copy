@@ -1,0 +1,238 @@
+@import '../../common.scss';
+// SECTION scatter 점 디자인
+circle.c3-shape {
+  r: 5;
+
+  opacity: 1 !important;
+
+  stroke: currentColor;
+  stroke-width: 3px;
+
+  fill: #fff !important;
+
+  &:hover {
+    // stroke: red;
+  }
+}
+
+// SECTION 차트 적정선 속성
+.c3-ygrid-line.adequate-line {
+  stroke-width: 4px;
+
+  line {
+    stroke: #16bf42;
+    stroke-opacity: 0.3;
+  }
+
+  text {
+    background-color: red;
+    fill: #16bf42;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+}
+
+// SECTION 차트 grid 선 속성
+.c3-xgrids {
+  .c3-xgrid {
+    stroke-dasharray: none;
+  }
+}
+
+.c3-ygrids {
+  .c3-ygrid {
+    stroke-dasharray: none;
+  }
+}
+
+#consumptionPerSpeed {
+  svg {
+    // width: 107.5%;
+  }
+  .c3-axis-x-label {
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important;
+    // transform: rotate(0);
+    // transform: translateY(20%);
+  }
+  .c3-axis-y-label {
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important;
+    // transform: rotate(0);
+    // transform: translateY(20%);
+  }
+  .c3-axis-y2-label {
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important;
+    // transform-origin: 15px 15px;
+    // transform: rotate(90);
+    // // transform: translateY(-110px);
+    // // transform: translate3d(7.5%, -7%, 0);
+  }
+}
+
+//SECTION FormBoard
+.form-board {
+  width: 100%;
+  > .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    margin-bottom: 30px;
+
+    > .col {
+      flex: 1;
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+//SECTION ListSearchModal
+.list-search-modal {
+  .ant-modal-content {
+    .ant-modal-header {
+      border-bottom: none;
+      .ant-modal-title {
+      }
+    }
+    .ant-modal-body {
+      border-bottom: none;
+      padding-top: 0;
+
+      .modal-box {
+        .input-box {
+          @include company-search-box;
+        }
+        .company-list-box {
+          margin-top: 20px;
+          .company-list {
+            height: 160px;
+            overflow-y: auto;
+
+            .company-item {
+              padding: 5px;
+
+              cursor: pointer;
+
+              &:hover {
+                background-color: $color-list-hover;
+              }
+            }
+          }
+
+          //SECTION 선사 클릭 시 단일 선사 정보 출력 속성
+          .company-info-box {
+            padding: 20px;
+            background-color: $color-panel;
+
+            border: 2px solid $color-text-primary;
+            border-radius: 4px;
+
+            .name-box {
+              font-weight: bold;
+              color: $color-text-primary;
+              font-size: 24px;
+            }
+
+            .particular-box {
+              .row {
+                display: flex;
+                margin-top: 20px;
+                .option {
+                  margin-right: 20px;
+
+                  .header {
+                    font-weight: bold;
+                  }
+
+                  .content {
+                  }
+                }
+              }
+            }
+
+            .other-company-manage-box {
+              text-align: center;
+              .name-box {
+                font-weight: bold;
+                color: $color-text-primary;
+                font-size: 24px;
+              }
+              .description {
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+  }
+}
+
+//SECTION FileDownloadModal
+.file-format-select-modal {
+  width: 434px !important;
+  border-radius: 100% !important;
+  .ant-modal-content {
+    border-radius: 4px;
+
+    .ant-modal-header {
+      border: none;
+      border-radius: 4px;
+      padding: 30px;
+      padding-bottom: 0;
+      margin-bottom: 20px;
+
+      .ant-modal-title {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+    }
+    .ant-modal-body {
+      border: none;
+      padding: 0 30px 0 30px;
+      margin-bottom: 20px;
+
+      .button-box {
+        display: flex;
+        justify-content: space-between;
+        .option {
+          width: 180px;
+          height: 80px;
+          border-radius: 4px;
+          border: solid 1px #0080ff;
+          background-color: #e5f2ff;
+
+          font-size: 22px;
+          font-weight: bold;
+          color: #0080ff;
+        }
+      }
+    }
+    .ant-modal-footer {
+      border: none;
+      padding: 0 30px;
+      padding-bottom: 30px;
+      .option {
+        width: 77px;
+        height: 44px;
+        border-radius: 4px;
+        background-color: #eff2f5;
+        font-size: 16px;
+      }
+    }
+  }
+}
+//!SECTION

@@ -1,0 +1,256 @@
+.vessel-particular-container,
+.engine-particular-container {
+  width: 100%;
+  height: 100%; }
+
+.vessel-particular-container > .content-box,
+.engine-particular-container > .content-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px; }
+
+.vessel-particular-container > .content-box .page,
+.engine-particular-container > .content-box .page {
+  background-color: #fff;
+  padding-top: 40px;
+  border-radius: 4px;
+  border-top: 5px solid #4e5961;
+  width: 565px;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.vessel-particular-container > .content-box .page.right-page,
+.engine-particular-container > .content-box .page.right-page {
+  margin-left: 20px; }
+
+.vessel-particular-container > .content-box .page .page-header,
+.engine-particular-container > .content-box .page .page-header {
+  padding: 0 40px;
+  font-size: 20px;
+  font-weight: bold; }
+
+.vessel-particular-container > .content-box .page .page-content,
+.engine-particular-container > .content-box .page .page-content {
+  padding: 0 40px;
+  margin-top: 30px;
+  flex: 1;
+  overflow-y: auto; }
+
+.cc-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; }
+
+.cc-container .cc-flex-box {
+  width: 70%;
+  height: 100%; }
+
+.cc-container .cc-flex-box .chart-area {
+  width: 100%;
+  height: 427px;
+  background-color: #fff;
+  padding: 40px 60px; }
+
+.cc-container .cc-flex-box .chart-area .chart-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; }
+
+.cc-container .cc-flex-box .chart-area .consumption-chart {
+  width: 100%; }
+
+.cc-container .cc-flex-box .data-area {
+  margin-top: 20px; }
+
+.cc-container .cc-flex-box .data-area .fuel-consumption-rate-input .ant-input-number-handler-wrap {
+  display: block;
+  opacity: 1 !important; }
+
+.cc-container .cc-flex-box .empty-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.cc-container .cc-flex-box .empty-box .title-box {
+  text-align: center;
+  margin-top: 30px; }
+
+.cc-container .cc-flex-box .empty-box .title-box .header-title {
+  font-size: 20px;
+  font-weight: bold; }
+
+.cc-container .cc-flex-box .empty-box .title-box .sub-title {
+  margin-top: 8.5px;
+  font-size: 14px;
+  color: #6d767d; }
+
+.cs-container {
+  width: 100%;
+  padding: 0 40px;
+  padding-bottom: 30px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center; }
+
+.cs-container .cs-flex-box {
+  width: 864px;
+  background-color: #fff;
+  padding: 60px; }
+
+.cs-container .cs-flex-box .title-area {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; }
+
+.cs-container .cs-flex-box .title-area .sub-title {
+  font-size: 18px;
+  font-weight: normal; }
+
+.cs-container .cs-flex-box .document-area .document-box {
+  margin-top: 40px; }
+
+.cs-container .cs-flex-box .document-area .document-box.company-box th,
+.cs-container .cs-flex-box .document-area .document-box.company-box td {
+  height: 33px; }
+
+.cs-container .cs-flex-box .document-area .document-box .box-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document.engine-table-box {
+  display: flex; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td {
+  border: 2px solid #fff;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 13px;
+  height: 40px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th .badge,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td .badge {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #fff;
+  font-size: 9px;
+  color: #4f575d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th .badge-box,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td .badge-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th .badge-box .badge-item,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td .badge-box .badge-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  font-size: 9px;
+  margin: 0 3px;
+  border-radius: 2px;
+  border: solid 1px #4f575d;
+  background-color: #fff;
+  color: #4f575d; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th .ant-input-number,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th .ant-input,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td .ant-input-number,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td .ant-input {
+  width: 100%;
+  text-align: center; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th .ant-input-number .ant-input-number-input,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th .ant-input .ant-input-number-input,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td .ant-input-number .ant-input-number-input,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td .ant-input .ant-input-number-input {
+  text-align: center; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th textarea,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td textarea {
+  text-align: center;
+  vertical-align: middle; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th.header {
+  background-color: #4f575d;
+  font-weight: normal;
+  color: #fff; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table th.sub-header {
+  background-color: #828a91;
+  font-weight: normal;
+  color: #fff; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td.data {
+  background-color: #ebedf2; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table td.hidden-cell {
+  visibility: hidden; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .fill-height {
+  height: max-content; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table.main-engine-table {
+  width: 474px;
+  height: 242px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table.sub-engine-table {
+  flex: 1;
+  height: 242px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table.particular-table th,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table.particular-table td {
+  height: 40px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .engine-particular-header-row th,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .engine-particular-header-row td {
+  height: 29px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .engine-particular-header-row-sub th,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .engine-particular-header-row-sub td {
+  height: 40px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .engine-particular-value-row th,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .engine-particular-value-row td {
+  height: 33px; }
+
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .fuel-consumption-header-row th,
+.cs-container .cs-flex-box .document-area .document-box .document .document-table .fuel-consumption-header-row td {
+  height: 40px; }
+
+.cs-container .cs-flex-box .document-area .document-box.sign-box, .cs-container .cs-flex-box .document-area .document-box.sign {
+  text-align: right; }
+
+.cs-container .cs-flex-box .document-area .document-box.sign-box .sign-date {
+  text-align: center; }
+
+.cs-container .cs-flex-box .document-area .document-box.sign-box .sign-date .date-field {
+  margin-left: 60px; }
+
+.cs-container .cs-flex-box .document-area .document-box.sign-box .sign {
+  margin-top: 20px; }
+
+.cs-container .cs-flex-box .document-area .document-box.sign-box .sign .sign-owner {
+  margin-right: 100px; }
+
+.engine-particular-container .ant-form-item-explain {
+  display: none; }

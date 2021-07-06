@@ -1,0 +1,336 @@
+//SECTION VesselParticular 컴포넌트, EnginePartucular 컴포넌트
+.vessel-particular-container,
+.engine-particular-container {
+  width: 100%;
+  height: 100%;
+  > .content-box {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+
+    .page {
+      background-color: #fff;
+      padding-top: 40px;
+
+      border-radius: 4px;
+      border-top: 5px solid #4e5961;
+
+      width: 565px;
+      max-width: 600px;
+
+      height: 100%;
+
+      &.right-page {
+        margin-left: 20px;
+      }
+
+      display: flex;
+      flex-direction: column;
+
+      .page-header {
+        padding: 0 40px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .page-content {
+        padding: 0 40px;
+        margin-top: 30px;
+        flex: 1;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+//SECTION ConsumptionChart 컴포넌트
+.cc-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  .cc-flex-box {
+    width: 70%;
+    height: 100%;
+
+    .chart-area {
+      width: 100%;
+      height: 427px;
+      background-color: #fff;
+      padding: 40px 60px;
+
+      .chart-title {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .consumption-chart {
+        width: 100%;
+      }
+    }
+    .data-area {
+      margin-top: 20px;
+
+      .fuel-consumption-rate-input {
+        .ant-input-number-handler-wrap {
+          display: block;
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    .empty-box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .image-box {
+      }
+
+      .title-box {
+        text-align: center;
+        margin-top: 30px;
+        .header-title {
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .sub-title {
+          margin-top: 8.5px;
+          font-size: 14px;
+          color: #6d767d;
+        }
+      }
+    }
+  }
+}
+
+//SECTION ConsumptionStandard 컴포넌트
+.cs-container {
+  width: 100%;
+
+  padding: 0 40px;
+  padding-bottom: 30px;
+
+  overflow-y: auto;
+
+  display: flex;
+  justify-content: center;
+
+  .cs-flex-box {
+    width: 864px;
+    background-color: #fff;
+
+    padding: 60px;
+
+    .title-area {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+
+      .sub-title {
+        font-size: 18px;
+        font-weight: normal;
+      }
+    }
+    .document-area {
+      .document-box {
+        margin-top: 40px;
+
+        &.company-box {
+          th,
+          td {
+            height: 33px;
+          }
+        }
+        .box-title {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .document {
+          &.engine-table-box {
+            display: flex;
+          }
+          .document-table {
+            th,
+            td {
+              border: 2px solid #fff;
+
+              text-align: center;
+              white-space: nowrap;
+
+              font-size: 13px;
+              height: 40px;
+
+              .badge {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+
+                width: 10px;
+                height: 10px;
+
+                border-radius: 2px;
+
+                background-color: #fff;
+                font-size: 9px;
+                color: #4f575d;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                justify-content: center;
+              }
+
+              .badge-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .badge-item {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  width: 15px;
+                  height: 15px;
+                  font-size: 9px;
+
+                  margin: 0 3px;
+
+                  border-radius: 2px;
+                  border: solid 1px #4f575d;
+
+                  background-color: #fff;
+                  color: #4f575d;
+                }
+              }
+
+              .ant-input-number,
+              .ant-input {
+                width: 100%;
+                text-align: center;
+                .ant-input-number-input {
+                  text-align: center;
+                }
+              }
+
+              textarea {
+                text-align: center;
+                vertical-align: middle;
+              }
+            }
+
+            th.header {
+              background-color: #4f575d;
+
+              font-weight: normal;
+              color: #fff;
+            }
+
+            th.sub-header {
+              background-color: #828a91;
+
+              font-weight: normal;
+              color: #fff;
+            }
+
+            td.data {
+              background-color: #ebedf2;
+            }
+
+            td.hidden-cell {
+              visibility: hidden;
+              // width: 0;
+            }
+
+            .fill-height {
+              height: max-content;
+            }
+
+            &.main-engine-table {
+              width: 474px;
+              height: 242px;
+            }
+
+            &.sub-engine-table {
+              flex: 1;
+              height: 242px;
+            }
+
+            &.particular-table {
+              th,
+              td {
+                height: 40px;
+              }
+            }
+
+            .engine-particular-header-row {
+              th,
+              td {
+                height: 29px;
+              }
+            }
+
+            .engine-particular-header-row-sub {
+              th,
+              td {
+                height: 40px;
+              }
+            }
+
+            .engine-particular-value-row {
+              th,
+              td {
+                height: 33px;
+              }
+            }
+
+            .fuel-consumption-header-row {
+              th,
+              td {
+                height: 40px;
+              }
+            }
+          }
+        }
+
+        &.sign-box,
+        &.sign {
+          text-align: right;
+        }
+
+        &.sign-box {
+          .sign-date {
+            text-align: center;
+            .date-field {
+              margin-left: 60px;
+            }
+          }
+
+          .sign {
+            margin-top: 20px;
+            .sign-owner {
+              margin-right: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//NOTE
+.engine-particular-container {
+  .ant-form-item-explain {
+    display: none;
+  }
+}

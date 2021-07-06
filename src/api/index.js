@@ -1,0 +1,9 @@
+export { default as AuthAPI } from './authApi';
+export { default as CompanyAPI } from './companyApi';
+export { default as ConsumptionApi } from './consumptionApi';
+export { default as VesselAPI } from './vesselApi';
+export { default as ParticularAPI } from './particularApi';
+export { default as EngineAPI } from './engineApi';
+export { default as FleetMonitoringAPI } from './fleetMonitoringApi';
+export { default as CalcConsumptionApi } from './calcConsumptionApi';
+export { default as DataMonitoringAPI } from './dataMonitoringApi';

@@ -1,0 +1,56 @@
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("assets/images/login_bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.signin-container .signin-flex-box {
+  width: 400px;
+  height: 562px;
+  padding: 70px 40px 50px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  text-align: center; }
+
+.signin-container .signin-flex-box .signin-title-area {
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Spoqa Han Sans';
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.65;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2b2c30; }
+
+.signin-container .signin-flex-box .signin-input-area {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  padding: 14px 0 0; }
+
+.signin-container .signin-flex-box .signin-input-area .input-box input {
+  height: 50px;
+  font-size: 15px;
+  width: 320px;
+  background-color: #eff2f5;
+  border-bottom: 2px solid #afb5ba;
+  margin-bottom: 7px;
+  padding: 12px 16px; }
+
+.signin-container .signin-flex-box .signin-interface-area {
+  text-align: center; }
+
+.signin-container .signin-flex-box .signin-interface-area #loginBtn {
+  width: 320px;
+  height: 50px;
+  padding: 13px 137px 12px;
+  border-radius: 4px;
+  background-color: #0080ff;
+  color: #fff; }

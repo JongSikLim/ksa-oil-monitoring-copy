@@ -1,0 +1,109 @@
+import React from 'react';
+import { v4 } from 'uuid';
+
+const CalcConsumptionTr = ({ row, idx, daysInMonth }) => {
+  const {
+    id,
+    begin,
+    end,
+    voyageTime,
+    waitingTime,
+    distance,
+    averageSpeed,
+    reportOil,
+    calculationOil,
+  } = row;
+  return (
+    <tr>
+      <td>
+        <input
+          type="number"
+          className="cc-field-input"
+          defaultValue={begin.day}
+          data-id={id}
+          data-rowidx={idx}
+          data-columnkey={'begin-day'}
+          min={1}
+          max={daysInMonth}
+        />
+      </td>
+      <td>
+        <input
+          type="number"
+          className="cc-field-input"
+          defaultValue={begin.hour}
+          data-id={id}
+          data-rowidx={idx}
+          data-columnkey={'begin-hour'}
+          min={0}
+          max={24}
+        />
+      </td>
+      <td>
+        <input
+          type="number"
+          className="cc-field-input"
+          defaultValue={begin.min}
+          data-id={id}
+          data-rowidx={idx}
+          data-columnkey={'begin-min'}
+          min={0}
+          max={60}
+        />
+      </td>
+      <td>
+        <input
+          type="number"
+          className="cc-field-input"
+          defaultValue={end.day}
+          data-id={id}
+          data-rowidx={idx}
+          data-columnkey={'end-day'}
+          min={1}
+          max={daysInMonth}
+        />
+      </td>
+      <td>
+        <input
+          type="number"
+          className="cc-field-input"
+          defaultValue={end.hour}
+          data-id={id}
+          data-rowidx={idx}
+          data-columnkey={'end-hour'}
+          min={0}
+          max={24}
+        />
+      </td>
+      <td>
+        <input
+          type="number"
+          className="cc-field-input"
+          defaultValue={end.min}
+          data-id={id}
+          data-rowidx={idx}
+          data-columnkey={'end-min'}
+          min={0}
+          max={60}
+        />
+      </td>
+      <td>{voyageTime}</td>
+      <td>{waitingTime}</td>
+      <td>{distance}</td>
+      <td>{averageSpeed}</td>
+      <td>
+        <input
+          type="number"
+          className="cc-field-input"
+          defaultValue={reportOil}
+          data-id={id}
+          data-rowidx={idx}
+          data-columnkey={'reportOil'}
+        />
+      </td>
+      <td>{calculationOil}</td>
+    </tr>
+  );
+};
+
+export default CalcConsumptionTr;

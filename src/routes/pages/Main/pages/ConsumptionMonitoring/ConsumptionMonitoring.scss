@@ -1,0 +1,809 @@
+.cm-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+
+  > .cm-flex-box {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .header-interface-area {
+      display: flex;
+      justify-content: space-between;
+
+      .left-box {
+        > .title {
+          font-size: 26px;
+          font-weight: bold;
+        }
+      }
+
+      .right-box {
+        .btn {
+          margin-left: 6px;
+          padding: 6px 14px;
+          border-radius: 4px;
+
+          &.default-btn {
+          }
+
+          &.primary-btn {
+            width: 57px;
+            height: 36px;
+            background-color: #0080ff;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .chart-area {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      padding: 20px;
+      margin-top: 20px;
+
+      border: solid 1px #d4d6d8;
+      border-radius: 4px;
+
+      .year-selector {
+        display: flex;
+
+        padding: 8px 16px;
+        background-color: #eeeeee;
+
+        font-weight: bold;
+
+        .arrow-box {
+          cursor: pointer;
+        }
+
+        .text-box {
+          padding: 0px 48px;
+        }
+      }
+
+      #monthlyConsumptionChart {
+      }
+
+      .caption-box {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    // 테이블 디자인
+    .table-area {
+      margin-top: 16px;
+      flex: 1;
+    }
+  }
+}
+
+#reportDatePickerPopover {
+  border-radius: 4px;
+  .ant-popover-inner-content {
+    padding: 0;
+  }
+  .report-date-picker-contaier {
+    width: 255px;
+    height: 346px;
+
+    .report-date-picker-flex-box {
+      .header-box {
+        text-align: center;
+        border-bottom: 1px solid #d4d6d8;
+        padding: 10px;
+        .header-title {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+
+      .date-range-box {
+        padding: 10px 0;
+        border-bottom: 1px solid #d4d6d8;
+        text-align: center;
+
+        .date-box {
+          width: 106px;
+          height: 30px;
+          padding: 5px 0px;
+          border-radius: 4px;
+          border: solid 1px #d4d6d8;
+          text-align: center;
+
+          &.active {
+            border: solid 2px #2580ec;
+            box-shadow: 0 0 0 2px rgba(37, 128, 236, 0.2);
+          }
+        }
+        .hyphen {
+          margin: 0 8px;
+        }
+      }
+
+      .calendar-box {
+        border-bottom: 1px solid #d4d6d8;
+        //SECTION DateRangePicker
+        .datepicker-container {
+          .datepicker-flex-box {
+            display: flex;
+            flex-direction: column;
+
+            .year-change-interface-box {
+              display: flex;
+              justify-content: center;
+
+              margin: 10px 0;
+              .swipe-btn {
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+              }
+
+              .now-year-text {
+                margin: 0 55px;
+
+                font-size: 16px;
+                font-weight: bold;
+              }
+            }
+
+            .month-box {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              margin-bottom: 7px;
+              .month-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 3px;
+
+                width: 66px;
+                height: 30px;
+                font-size: 14px;
+                border-radius: 4px;
+                border: solid 1px #d4d6d8;
+                background-color: #ffffff;
+
+                &.active {
+                  background-color: #2480ec;
+                  border-color: #2480ec;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .footer-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 56px;
+        .report-download-btn {
+          width: 235px;
+          height: 36px;
+          background-color: #2580ec;
+          color: #fff;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .ant-popover-inner-content {
+  }
+}
+
+//SECTION 테이블 디자인
+.cm-table-container {
+  .cm-table-flex-box {
+    .header-interface-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      .legend-box {
+        display: flex;
+
+        .legend {
+          font-size: 14px;
+          font-weight: bold;
+
+          .legend-text {
+            margin-left: 6px;
+          }
+
+          &:last-child {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .btn-box {
+        button {
+          width: 70px;
+          height: 36px;
+          margin: 0 6px 0 0;
+          padding: 8px 14px;
+          border-radius: 4px;
+          background-color: #eeeeee;
+        }
+      }
+    }
+
+    .content-box {
+      .ant-table-wrapper.cm-table {
+        #cm-table {
+          height: 335px;
+          > .ant-table-container {
+            border-color: #dadbdc;
+            .ant-table-header {
+              tr {
+                // height: 42px;
+
+                th.ant-table-cell {
+                  border-color: #dadbdc;
+
+                  text-align: center;
+                  font-weight: bold;
+                  padding: 0;
+                  height: 42px !important;
+
+                  .lock-icon {
+                    position: relative;
+                    left: 12px;
+                    bottom: 2px;
+                  }
+                }
+              }
+            }
+            .ant-table-body {
+              height: 210px;
+              td.ant-table-cell {
+                border-color: #dadbdc;
+                padding: 0;
+                height: 42px !important;
+                text-align: center;
+
+                .ant-input-number {
+                  width: 100%;
+                  text-align: center;
+                  input {
+                    text-align: center;
+                  }
+                }
+
+                &.strong {
+                  font-weight: bold !important;
+                  input {
+                    font-weight: bold !important;
+                  }
+                }
+
+                &.auto {
+                  background-color: #e8ffe9;
+
+                  input {
+                    pointer-events: none;
+
+                    &:disabled {
+                      background-color: #e8ffe9;
+                      color: rgba(0, 0, 0, 0.85);
+                    }
+                  }
+                }
+
+                //NOTE 적정여부 초과 시 초과사유 작성할 수 있도록
+                &.reason {
+                  background-color: #f3f3f3;
+                  cursor: not-allowed;
+                  input {
+                    pointer-events: none;
+                  }
+                }
+
+                &.adequate {
+                  cursor: not-allowed;
+                  .ant-select {
+                    pointer-events: none;
+                  }
+                  background-color: #f3f3f3;
+                }
+              }
+
+              tr.not-adequated {
+                td.reason {
+                  background-color: #fff;
+                  input {
+                    pointer-events: all;
+                    cursor: initial;
+                  }
+                }
+
+                td.consumptionRate {
+                  input {
+                    color: red !important;
+                  }
+                }
+              }
+
+              tr.reasoned {
+                td.adequate {
+                  background-color: #fff;
+                  .ant-select {
+                    pointer-events: initial;
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              input.reason-input-field {
+                &:focus {
+                  // border: none;
+                  // outline: none;
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+          .ant-table-footer {
+            padding: 0;
+            border-color: #dadbdc;
+            &:hover {
+              //FIXME 푸터 호버 시 BG 변경
+              background-color: #dadbdc;
+            }
+
+            .footer-summary-table {
+              .ant-table-container {
+                border-color: #fdf2e4;
+                // border-left-color: #fff;
+                // border-top-color: #fff;
+
+                .ant-table-body {
+                  background-color: #fdf2e4;
+
+                  tr.ant-table-row {
+                    &:hover {
+                      // background-color: #fdf2e4;
+
+                      td {
+                        background-color: #fdf2e4;
+                      }
+                    }
+
+                    td.ant-table-cell {
+                      border-color: #dadbdc;
+                      padding: 0;
+                      height: 42px !important;
+                      text-align: center;
+                      border-bottom: none;
+                      input {
+                        text-align: center;
+                      }
+
+                      &.strong {
+                        font-weight: bold !important;
+                      }
+
+                      &.auto {
+                        input {
+                          background-color: #fdf2e4;
+                          color: rgba(0, 0, 0, 0.85);
+                        }
+                      }
+                    }
+                  }
+
+                  &::-webkit-scrollbar {
+                    visibility: hidden;
+                  }
+                }
+              }
+            }
+          }
+
+          //SECTION 넘버 필드
+          input.table-cell-input-number {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              appearance: none;
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//!SECTION
+
+//SECTION 소모량 계산 모달 디자인
+.calc-consumption-modal {
+  .ant-modal-content {
+    .ant-modal-header {
+      padding: 40px 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #d4d6d8;
+
+      .modal-title-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title-left-box {
+          font-size: 26px;
+          font-weight: bold;
+
+          .emp {
+            color: #0080ff;
+          }
+        }
+        .title-right-box {
+          button {
+            padding: 6px 14px;
+            margin-right: 6px;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 4px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+          button.default {
+          }
+
+          button.primary {
+            background-color: #0080ff;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .ant-modal-body {
+      padding: 40px 40px;
+      padding-top: 30px;
+
+      .header-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .side {
+          .legend-label {
+            margin-left: 6px;
+            font-size: 14px;
+          }
+
+          button.default {
+            background-color: #eee;
+            padding: 8px 14px;
+            margin-right: 6px;
+            border-radius: 4px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .table-area {
+        margin-top: 16px;
+      }
+
+      .footer-area {
+        margin-top: 16px;
+        width: 100%;
+        height: 70px;
+
+        .calc-result-box {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 4px;
+          border: 1px solid #d4d6d8;
+          font-weight: bold;
+          font-size: 18px;
+
+          span.label {
+          }
+
+          span.slash {
+            margin: 0 18px;
+          }
+
+          span.value {
+            margin-left: 6px;
+          }
+
+          span.emp {
+            color: #0080ff;
+
+            &.over {
+              color: red;
+            }
+          }
+        }
+
+        .btn-calc-consumption {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          border: 1px solid #0080ff;
+          background-color: #e5f2ff;
+          font-size: 18px;
+          font-weight: bold;
+          color: #0080ff;
+        }
+      }
+    }
+  }
+}
+
+//SECTION 소요량 계산 모달 디자인
+.cc-table-container {
+  $table-width: 1080px;
+  width: 100%;
+
+  table.cc-common-table {
+    width: $table-width;
+    tr {
+      &:nth-child(1) {
+        border-top: 1px solid #d4d6d8;
+      }
+
+      th,
+      td {
+        &:nth-child(1) {
+          border-left: 1px solid #d4d6d8;
+        }
+      }
+    }
+
+    .auto {
+      background-color: #e8ffe9;
+    }
+
+    th {
+      background-color: #f8f9fa;
+    }
+
+    th,
+    td {
+      text-align: center;
+      height: 42px;
+      font-size: 16px;
+      // box-shadow: 0 0 0 1px #d4d6d8 inset;
+      border: 1px solid #d4d6d8;
+      border-left: none;
+      border-top: none;
+    }
+
+    &.cc-body-table {
+      tr {
+        &:nth-child(2) {
+          td {
+            border-top: none;
+          }
+        }
+        &:nth-last-child(1) {
+          td {
+            border-bottom: none;
+          }
+        }
+        td {
+          // border-top: none;
+          // border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .cc-header-table {
+    tr {
+      th {
+      }
+      &:nth-child(1) {
+        th {
+          &:nth-child(4) {
+            width: 106px;
+          }
+          &:nth-child(5) {
+            width: 106px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        th {
+          &:nth-child(-n + 6) {
+            width: 60px;
+          }
+          &:nth-child(7) {
+            width: 122px;
+          }
+          &:nth-child(8) {
+            width: 122px;
+          }
+          &:nth-child(9) {
+            width: 123px;
+          }
+          &:nth-child(10) {
+            width: 124px;
+          }
+          &:nth-child(11) {
+            width: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  .cc-body-table-wrapper {
+    width: $table-width;
+    height: 208px;
+    overflow-y: scroll;
+    table {
+      // width: calc($table-width - 20px);
+      width: $table-width - 17px;
+
+      tr {
+        &:last-child {
+          border-bottom: 1px solid #d4d6d8;
+        }
+
+        td {
+          &:nth-child(-n + 6) {
+            width: 60px;
+          }
+          &:nth-child(7) {
+            width: 122px;
+          }
+          &:nth-child(8) {
+            width: 122px;
+          }
+          &:nth-child(9) {
+            width: 106px;
+          }
+          &:nth-child(10) {
+            width: 106px;
+          }
+          &:nth-child(11) {
+            width: 123px;
+          }
+          &:nth-child(12) {
+            width: 123px;
+          }
+        }
+      }
+
+      td {
+        input {
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          &:out-of-range {
+            color: red;
+          }
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+          }
+        }
+      }
+    }
+
+    .ant-empty {
+      height: 100%;
+      margin: 0;
+      border-left: 1px solid #d4d6d8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .cc-footer-table-wrapper {
+    table {
+      tr {
+        &:nth-child(2) {
+          border-top: 1px solid #d4d6d8;
+        }
+
+        th {
+          background-color: #fdf2e4;
+          font-weight: normal;
+          &:nth-child(1) {
+            width: 360px;
+            font-weight: bold;
+          }
+          &:nth-child(2) {
+            width: 122px;
+          }
+          &:nth-child(3) {
+            width: 122px;
+          }
+          &:nth-child(4) {
+            width: 106px;
+          }
+          &:nth-child(5) {
+            width: 106px;
+          }
+          &:nth-child(6) {
+            width: 123px;
+          }
+          &:nth-child(7) {
+            width: 123px;
+          }
+          &:nth-child(8) {
+            width: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.warning-recalc-modal-container {
+  .ant-modal-content {
+    width: 540px;
+    height: 229px;
+
+    padding-top: 50px;
+
+    border-radius: 4px;
+
+    .ant-modal-body {
+      padding: 0;
+      .text-box {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      border: none;
+    }
+
+    .ant-modal-footer {
+      margin-top: 50px;
+      padding: 30px;
+      padding-top: 0;
+
+      border: none;
+      button {
+        font-size: 16px;
+        &.cancel {
+          width: 92px;
+          height: 44px;
+          background-color: #eff2f5;
+          border-radius: 4px;
+        }
+
+        &.ok {
+          width: 63px;
+          height: 44px;
+          background-color: #2680eb;
+          color: #fff;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

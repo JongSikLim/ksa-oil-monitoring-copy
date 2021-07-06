@@ -1,0 +1,170 @@
+//배경 컬러
+$color-sheet-bg: #ebedf2;
+
+//패널 컬러
+$color-tab: #4f575d;
+$color-sub-tab: #828a91;
+$color-panel: #ebedf2;
+
+//사이트 탭 컬러
+$color-side-tab-cateogry-bg: #e9eaeb;
+$color-side-tab-tab: #4e5961;
+
+//버튼 컬러
+$color-btn-primary: #1173fd;
+$color-btn-default: #4e5961;
+
+//라벨 컬러
+$color-label-green: #00c52e;
+$color-label-green-bg: #ebfbee;
+
+$color-label-gray: #6d767d;
+$color-label-gray-bg: #ebedf2;
+
+$color-label-red: #ff0000;
+
+//텍스트 컬러
+$color-text-disabled: #acb1b8;
+$color-text-primary: #1173fd;
+
+$color-list-hover: #ebf3fe;
+
+//테이블 컬러
+$color-table-cell-hover: #ebf3fe;
+$color-table-cell-hover-border: #446796;
+
+@mixin primary-button {
+  font-size: 18px;
+  padding: 4px 16px;
+  background-color: $color-btn-primary;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+@mixin default-button {
+  font-size: 18px;
+  padding: 4px 16px;
+  background-color: $color-btn-default;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+@mixin company-search-box {
+  color: black;
+
+  .ant-input-prefix {
+    margin-right: 13px;
+  }
+  .ant-input-affix-wrapper {
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 4px;
+    height: 42px;
+
+    border-color: #d4d6d8;
+  }
+  .ant-input-group-addon {
+    display: none;
+  }
+  input::placeholder {
+    color: #000;
+    font-size: 16px;
+  }
+}
+
+@mixin slim-scrollbar {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+//SECTION 커스텀 로더
+.custom-loader,
+.custom-loader:after {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+.custom-loader {
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 4px solid #e9e9e9;
+  border-right: 4px solid #e9e9e9;
+  border-bottom: 4px solid #e9e9e9;
+  border-left: 4px solid #2684ff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+//FIXME 컴포넌트 SCSS로 뺄것
+//SECTION 로딩 모달 속성
+.loading-modal-container {
+  width: 240px;
+  height: 240px;
+  background-color: #fff;
+  // padding: 53px 41px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .loading-spin-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .custom-loader {
+    }
+  }
+
+  .text-area {
+    margin-top: 20px;
+    text-align: center;
+    color: #4e5961;
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .sub-title {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.recalc-confirm-modal-container {
+  background-color: #fff;
+  z-index: 1000;
+}

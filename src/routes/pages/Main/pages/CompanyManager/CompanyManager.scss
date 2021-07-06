@@ -1,0 +1,450 @@
+@import '../../../../../common.scss';
+
+.cmanager-container {
+  width: 100%;
+  height: 100%;
+
+  // background-color: $color-sheet-bg;
+  > .cmanger-flex-box {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    > .page {
+      width: 50%;
+    }
+
+    .left-side {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      .header-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 141px;
+        min-height: 141px;
+
+        padding: 0 80px;
+
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+
+        > .title-area {
+          font-size: 32px;
+          font-weight: bold;
+        }
+        .insert-company-btn-area {
+          .insert-company-btn {
+            @include primary-button;
+          }
+        }
+      }
+
+      .content-area {
+        max-height: calc(100% - 141px);
+        padding: 40px 80px;
+
+        display: flex;
+        flex-direction: column;
+
+        .header-interface-area {
+          display: flex;
+          justify-content: space-between;
+
+          height: fit-content;
+
+          .title-area {
+            font-size: 22px;
+            font-weight: bold;
+          }
+
+          .search-box-area {
+            min-width: 360px;
+
+            .company-search-input-box {
+              @include company-search-box;
+            }
+          }
+
+          .button-area {
+            .export-btn {
+              width: 127px;
+              height: 42px;
+              padding: 7px 0;
+              border-radius: 4px;
+              border: solid 1px #1173fd;
+
+              color: #1173fd;
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .company-list-table-area {
+          padding-top: 20px;
+          flex: 1;
+          height: calc(100% - 80px);
+
+          //SECTION 테이블 높이 고정
+          .ant-table-wrapper {
+            height: 100%;
+            .ant-spin-nested-loading {
+              height: 100%;
+
+              .ant-spin-container {
+                height: 100%;
+
+                .ant-table-fixed-header {
+                  height: 100%;
+
+                  .ant-table-container {
+                    height: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    border-color: #d4d6d8 !important;
+
+                    .ant-table-header {
+                      tr {
+                        background-color: #f8f9fa;
+                      }
+                      th.ant-table-cell {
+                        font-weight: bolder;
+                        background-color: #f8f9fa;
+                        font-size: 16px;
+                        border-color: #d4d6d8 !important;
+                      }
+                    }
+                    .ant-table-body {
+                      flex: 1;
+                      // color: #16191c;
+                      table {
+                        .ant-table-tbody {
+                          font-size: 16px;
+                          .ant-table-row {
+                            .ant-table-cell {
+                              padding-left: 0;
+                              padding-right: 0;
+                              border-color: #d4d6d8 !important;
+                              &.bold {
+                                font-weight: bolder;
+                              }
+                            }
+
+                            &:hover {
+                              .ant-table-cell {
+                                background-color: $color-table-cell-hover;
+                                // border: 1px solid;
+                                // border-color: $color-table-cell-hover-border;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-side {
+      padding: 40px 80px;
+
+      height: 100%;
+
+      background-color: #fff;
+
+      display: flex;
+      flex-direction: column;
+
+      .header-area {
+        height: 168.8px;
+        .first-line {
+          display: flex;
+          justify-content: space-between;
+
+          .title-area {
+            font-size: 32px;
+            font-weight: bold;
+          }
+
+          .insert-vessel-btn-area {
+            .insert-vessel-btn {
+              @include primary-button;
+            }
+          }
+        }
+
+        .second-line {
+          margin-top: 40px;
+          .company-info-panel {
+            background-color: $color-sheet-bg;
+            padding: 20px;
+
+            display: flex;
+            .sector {
+              font-size: 14px;
+
+              margin-left: 40px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+
+              .title {
+                font-weight: bold;
+                color: #4e5961;
+              }
+              .content {
+                font-weight: normal;
+                color: #16191c;
+              }
+            }
+          }
+        }
+      }
+
+      .hr-line {
+        margin-top: 30px;
+        margin-bottom: 24px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .vessel-list-area {
+        max-height: calc(100% - 168.8px - 68px);
+
+        display: flex;
+        flex-direction: column;
+
+        .title-area {
+          font-size: 22px;
+          font-weight: bold;
+        }
+
+        .vessel-list-table-area {
+          margin-top: 16px;
+          height: calc(100% - 36.8px);
+
+          //SECTION 테이블 높이 고정
+          .ant-table-wrapper {
+            height: 100%;
+            .ant-spin-nested-loading {
+              height: 100%;
+
+              .ant-spin-container {
+                height: 100%;
+
+                .ant-table-fixed-header {
+                  height: 100%;
+
+                  .ant-table-container {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+
+                    border-color: #d4d6d8 !important;
+
+                    .ant-table-header {
+                      overflow: inherit !important;
+                      th.ant-table-cell {
+                        border-color: #d4d6d8 !important;
+                        font-weight: bolder;
+                        font-size: 16px;
+                      }
+
+                      th.none-padding {
+                        padding: 0;
+                      }
+                    }
+                    .ant-table-body {
+                      // flex: 1;
+                      font-size: 16px;
+
+                      tr.ant-table-row {
+                        &:hover {
+                          td {
+                            background-color: $color-table-cell-hover;
+                          }
+                        }
+
+                        .ant-table-cell {
+                          padding-left: 0;
+                          padding-right: 0;
+                          border-color: #d4d6d8 !important;
+                          &.bold {
+                            font-weight: bolder;
+                          }
+                        }
+
+                        td {
+                          .update-date-box {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .update-icon {
+                              margin-left: 10px;
+                              cursor: pointer;
+                            }
+                            .date-input-field {
+                            }
+                            .date-text {
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// SECTION 선사관리 Modal 속성
+.regist-company-modal,
+.regist-vessel-modal {
+  .ant-modal-content {
+    height: 435px;
+    border-radius: 4px;
+    .ant-modal-header {
+      border-radius: 4px;
+
+      border-bottom: none;
+      padding: 30px;
+      padding-bottom: 0;
+      .ant-modal-title {
+        font-size: 22px;
+        color: #16191c;
+        font-weight: bold;
+      }
+    }
+    .ant-modal-body {
+      margin-top: 20px;
+      border-bottom: none;
+      // padding-top: 0;
+      padding: 0 30px;
+
+      .modal-box {
+        .input-box {
+          @include company-search-box;
+        }
+        .company-list-box {
+          margin-top: 20px;
+
+          .company-list {
+            height: 210px;
+            overflow-y: auto;
+
+            .company-item {
+              width: 96%;
+              padding: 9px 16px;
+              height: 42px;
+
+              border-radius: 4px;
+
+              font-size: 16px;
+
+              cursor: pointer;
+
+              &:hover {
+                background-color: $color-list-hover;
+              }
+            }
+          }
+
+          //SECTION 선사 클릭 시 단일 선사 정보 출력 속성
+          .company-info-box {
+            padding: 20px;
+            background-color: $color-panel;
+            height: 210px;
+            // border: 2px solid $color-text-primary;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 0 0 2px $color-text-primary inset;
+
+            .name-box {
+              font-weight: bold;
+              color: $color-text-primary;
+              font-size: 24px;
+            }
+
+            .particular-box {
+              .row {
+                display: flex;
+                margin-top: 20px;
+                .option {
+                  margin-right: 20px;
+
+                  .header {
+                    font-weight: bold;
+                  }
+
+                  .content {
+                  }
+                }
+              }
+            }
+
+            .other-company-manage-box {
+              text-align: center;
+              .name-box {
+                font-weight: bold;
+                color: $color-text-primary;
+                font-size: 24px;
+              }
+              .description {
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+      padding: 30px;
+      padding-top: 20px;
+
+      .company-insert-btn,
+      .vessel-insert-btn {
+        width: 77px;
+        height: 44px;
+        padding: 9px 24px 11px;
+        border-radius: 4px;
+        font-size: 16px;
+        border: none;
+        &.company-insert-ok-btn,
+        &.vessel-insert-ok-btn {
+          background-color: #2680eb;
+          color: #fff;
+        }
+
+        &.company-insert-cancel-btn,
+        &.vessel-insert-cancel-btn {
+          background-color: #eff2f5;
+          color: #000;
+        }
+      }
+
+      .company-insert-ok-btn[disabled],
+      .vessel-insert-ok-btn[disabled] {
+        opacity: 0.5;
+      }
+    }
+  }
+}
